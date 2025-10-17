@@ -1,7 +1,11 @@
 class ApiConfig {
-  // Point to your actual working web server
-  static const String baseUrl = 'https://vib3-web-75tal.ondigitalocean.app/api';
-  static const String wsUrl = 'wss://vib3-web-75tal.ondigitalocean.app';
+  // Production VIB3 backend on DigitalOcean
+  static const String baseUrl = 'https://vib3-backend-u8zjk.ondigitalocean.app/api';
+  static const String wsUrl = 'wss://vib3-backend-u8zjk.ondigitalocean.app';
+
+  // For local development:
+  // static const String baseUrl = 'http://10.0.2.2:3000/api'; // Android emulator
+  // static const String wsUrl = 'ws://10.0.2.2:3000';
   
   // API Endpoints
   static const String auth = '/auth';
