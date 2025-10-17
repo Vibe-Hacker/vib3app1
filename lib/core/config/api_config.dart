@@ -1,0 +1,30 @@
+class ApiConfig {
+  // Point to your actual working web server
+  static const String baseUrl = 'https://vib3-web-75tal.ondigitalocean.app/api';
+  static const String wsUrl = 'wss://vib3-web-75tal.ondigitalocean.app';
+  
+  // API Endpoints
+  static const String auth = '/auth';
+  static const String users = '/users';
+  static const String posts = '/posts';
+  static const String stories = '/stories';
+  static const String messages = '/messages';
+  static const String notifications = '/notifications';
+  static const String search = '/search';
+  static const String upload = '/upload';
+  
+  // Headers
+  static Map<String, String> get headers => {
+    'Content-Type': 'application/json',
+    'Accept': 'application/json',
+  };
+  
+  static Map<String, String> authHeaders(String token) => {
+    ...headers,
+    'Authorization': 'Bearer $token',
+  };
+  
+  // Timeouts
+  static const Duration connectionTimeout = Duration(seconds: 30);
+  static const Duration receiveTimeout = Duration(seconds: 30);
+}
